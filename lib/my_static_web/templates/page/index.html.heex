@@ -1,0 +1,16 @@
+<section class="row">
+  <article class="column">
+    <h2>Demo</h2>
+    <ul>
+      <li>
+        <a href={Routes.public_path(@conn, :index, ["markup"])}>HTML</a>
+      </li>
+      <li>
+        <a href={Routes.public_path(@conn, :index, ["markdown"])}>Markdown w/title.txt</a>
+      </li>
+      <li>
+        <a href={Routes.public_path(@conn, :index, ["noroute"])}>No Route (404)</a>
+      </li>
+    </ul>
+  </article>
+</section>
