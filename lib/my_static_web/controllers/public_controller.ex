@@ -6,8 +6,8 @@ defmodule MyStaticWeb.PublicController do
   def index(conn, %{"slug" => slug}) do
     slug = Enum.join(slug, "/") |> String.downcase()
 
-  	with {:ok, path} <- _check_public_path(slug) do
-    	conn
+    with {:ok, path} <- _check_public_path(slug) do
+      conn
       |> assign(:base_url, Routes.public_url(conn, :index, [slug]))
       |> assign(:page_title, _get_title(path, slug))
       |> assign(:path, path)
