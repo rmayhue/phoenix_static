@@ -9,10 +9,10 @@ defmodule MyStaticWeb.PublicController do
   	with {:ok, path} <- _check_public_path(slug) do
     	conn
       |> assign(:base_url, Routes.public_url(conn, :index, [slug]))
-    	|> assign(:page_title, _get_title(path, slug))
+      |> assign(:page_title, _get_title(path, slug))
       |> assign(:path, path)
       |> assign(:slug, slug)
-    	|> render("index.html")
+      |> render("index.html")
     end
   end
 
